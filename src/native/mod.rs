@@ -32,6 +32,11 @@ pub mod icon_text;
 #[cfg(feature = "icon_text")]
 pub use icon_text::IconText;
 
+#[cfg(feature = "grid")]
+pub mod grid;
+#[cfg(feature = "grid")]
+pub use grid::Grid;
+
 #[cfg(feature = "modal")]
 pub mod modal;
 #[cfg(feature = "modal")]
@@ -51,3 +56,23 @@ pub use tabs::Tabs;
 pub mod time_picker;
 #[cfg(feature = "time_picker")]
 pub use time_picker::TimePicker;
+
+#[cfg(feature = "wrap")]
+pub mod wrap;
+#[cfg(feature = "wrap")]
+pub use wrap::Wrap;
+
+#[cfg(feature = "number_input")]
+pub mod number_input;
+#[cfg(feature = "number_input")]
+pub use number_input::NumberInput;
+
+#[cfg(feature = "selection_list")]
+pub mod selection_list;
+#[cfg(feature = "selection_list")]
+pub use selection_list::{List, SelectionList, State};
+
+#[cfg(feature = "split")]
+pub mod split;
+#[cfg(feature = "split")]
+pub use split::Split;

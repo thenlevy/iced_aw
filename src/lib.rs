@@ -78,6 +78,10 @@ mod platform {
     pub use {crate::graphics::floating_button, floating_button::FloatingButton};
 
     #[doc(no_inline)]
+    #[cfg(feature = "grid")]
+    pub use {crate::graphics::grid, grid::Grid};
+
+    #[doc(no_inline)]
     #[cfg(feature = "modal")]
     pub use {crate::graphics::modal, modal::Modal};
 
@@ -98,6 +102,22 @@ mod platform {
     #[doc(no_inline)]
     #[cfg(feature = "time_picker")]
     pub use {crate::graphics::time_picker, time_picker::TimePicker};
+
+    #[doc(no_inline)]
+    #[cfg(feature = "wrap")]
+    pub use {crate::graphics::wrap, wrap::Wrap};
+
+    #[doc(no_inline)]
+    #[cfg(feature = "number_input")]
+    pub use {crate::graphics::number_input, number_input::NumberInput};
+
+    #[doc(no_inline)]
+    #[cfg(feature = "selection_list")]
+    pub use {crate::graphics::selection_list, selection_list::SelectionList};
+
+    #[doc(no_inline)]
+    #[cfg(feature = "split")]
+    pub use {crate::graphics::split, split::Split};
 }
 #[cfg(target_arch = "wasm32")]
 pub mod web;
@@ -118,6 +138,10 @@ mod platform {
     pub use crate::web::{color_picker, color_picker::ColorPicker};
 
     #[doc(no_inline)]
+    #[cfg(feature = "grid")]
+    pub use crate::web::{grid, grid::Grid};
+
+    #[doc(no_inline)]
     #[cfg(feature = "date_picker")]
     pub use crate::web::{date_picker, date_picker::DatePicker};
 
@@ -128,6 +152,20 @@ mod platform {
     #[doc(no_inline)]
     #[cfg(feature = "modal")]
     pub use crate::web::{modal, modal::Modal};
+
+    #[doc(no_inline)]
+    #[cfg(feature = "tab_bar")]
+    pub use crate::web::{
+        tab_bar,
+        tab_bar::{TabBar, TabLabel},
+    };
+
+    #[doc(no_inline)]
+    #[cfg(feature = "tabs")]
+    pub use crate::web::{
+        tabs,
+        tabs::{TabBarPosition, Tabs},
+    };
 
     #[doc(no_inline)]
     #[cfg(feature = "time_picker")]

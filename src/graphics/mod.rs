@@ -27,6 +27,11 @@ pub mod floating_button;
 #[cfg(feature = "floating_button")]
 pub use floating_button::FloatingButton;
 
+#[cfg(feature = "grid")]
+pub mod grid;
+#[cfg(feature = "grid")]
+pub use grid::Grid;
+
 #[cfg(feature = "icon_text")]
 pub mod icon_text;
 #[cfg(feature = "icon_text")]
@@ -53,3 +58,23 @@ pub mod time_picker;
 #[doc(no_inline)]
 #[cfg(feature = "time_picker")]
 pub use time_picker::TimePicker;
+
+#[cfg(feature = "wrap")]
+pub mod wrap;
+#[cfg(feature = "wrap")]
+pub use wrap::Wrap;
+
+#[cfg(feature = "number_input")]
+pub mod number_input;
+#[cfg(feature = "number_input")]
+pub use number_input::NumberInput;
+
+#[cfg(feature = "selection_list")]
+pub mod selection_list;
+#[cfg(feature = "selection_list")]
+pub use selection_list::SelectionList;
+
+#[cfg(feature = "split")]
+pub mod split;
+#[cfg(feature = "split")]
+pub use split::Split;
