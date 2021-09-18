@@ -292,7 +292,7 @@ where
 
             match key_code {
                 keyboard::KeyCode::Tab => {
-                    if self.state.keyboard_modifiers.shift {
+                    if self.state.keyboard_modifiers.shift() {
                         self.state.focus = self.state.focus.previous();
                     } else {
                         self.state.focus = self.state.focus.next();

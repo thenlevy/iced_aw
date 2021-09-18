@@ -429,7 +429,7 @@ where
             let mut status = event::Status::Ignored;
 
             if let keyboard::KeyCode::Tab = key_code {
-                if self.state.keyboard_modifiers.shift {
+                if self.state.keyboard_modifiers.shift() {
                     self.state.focus = self.state.focus.previous(self.state.show_seconds);
                 } else {
                     self.state.focus = self.state.focus.next(self.state.show_seconds);
