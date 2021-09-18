@@ -80,13 +80,9 @@ members = [
     "examples/tabs",
     #"examples/tabs_min",
     "examples/time_picker",
-<<<<<<< HEAD
-    "examples/web"
-=======
     "examples/wrap",
     "examples/web",
     "examples/number_input",
     "examples/selection_list",
     "examples/split",
->>>>>>> main
 ]
