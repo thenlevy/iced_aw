@@ -10,6 +10,7 @@ repository = "https://github.com/kaiden42/iced_aw"
 readme = "README.md"
 keywords = ["gui", "ui", "graphics", "interface", "widgets", "iced"]
 categories = ["gui"]
+resolver = "2"
 
 [features]
 badge = []
