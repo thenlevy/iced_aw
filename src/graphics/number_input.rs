@@ -5,7 +5,7 @@ use crate::native::number_input::{self, ModifierState};
 use iced_graphics::backend::{self, Backend};
 use iced_graphics::{Primitive, Renderer};
 use iced_native::mouse;
-use iced_native::{Background, Color, HorizontalAlignment, Point, Rectangle, VerticalAlignment};
+use iced_native::{Background, Color, alignment::Horizontal, Point, Rectangle, alignment::Vertical};
 
 pub use crate::native::number_input::State;
 pub use crate::style::number_input::{Style, StyleSheet};
@@ -76,8 +76,8 @@ where
             font,
             size: dec_bounds.height * 0.9,
             color: decrease_btn_style.icon_color,
-            horizontal_alignment: HorizontalAlignment::Center,
-            vertical_alignment: VerticalAlignment::Center,
+            horizontal_alignment: Horizontal::Center,
+            vertical_alignment: Vertical::Center,
         };
         let decrease_btn = Primitive::Group {
             primitives: vec![decrease_button_rect, decrease_text],
@@ -103,8 +103,8 @@ where
             font,
             size: inc_bounds.height * 0.9,
             color: increase_btn_style.icon_color,
-            horizontal_alignment: HorizontalAlignment::Center,
-            vertical_alignment: VerticalAlignment::Center,
+            horizontal_alignment: Horizontal::Center,
+            vertical_alignment: Vertical::Center,
         };
         let increase_btn = Primitive::Group {
             primitives: vec![increase_button_rect, increase_text],
