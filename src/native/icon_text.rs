@@ -7,7 +7,8 @@
 use std::hash::Hash;
 
 use iced_native::{
-    Color, Element, HorizontalAlignment, Length, Rectangle, Size, VerticalAlignment, Widget,
+    alignment::Horizontal as HorizontalAlignment, alignment::Vertical as VerticalAlignment, Color,
+    Element, Length, Rectangle, Size, Widget,
 };
 
 /// Text widget with icon font.

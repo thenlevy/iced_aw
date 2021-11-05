@@ -18,8 +18,8 @@ use crate::{
 use canvas::{Cache, LineCap, Path, Stroke, Text};
 use chrono::{NaiveTime, Timelike};
 use iced_graphics::{
-    backend, canvas, Backend, Color, HorizontalAlignment, Point, Primitive, Rectangle, Renderer,
-    Vector, VerticalAlignment,
+    alignment::Horizontal as HorizontalAlignment, alignment::Vertical as VerticalAlignment,
+    backend, canvas, Backend, Color, Point, Primitive, Rectangle, Renderer, Vector,
 };
 use iced_native::mouse;
 
@@ -321,8 +321,8 @@ fn clock(
                 color: style.get(&clock_style_state).unwrap().clock_number_color,
                 size: period_size,
                 font: iced_graphics::Font::default(),
-                horizontal_alignment: iced_graphics::HorizontalAlignment::Center,
-                vertical_alignment: iced_graphics::VerticalAlignment::Center,
+                horizontal_alignment: iced_graphics::alignment::Horizontal::Center,
+                vertical_alignment: iced_graphics::alignment::Vertical::Center,
             };
             frame.fill_text(period_text);
 
@@ -361,8 +361,8 @@ fn clock(
                     color: style.get(&style_state).unwrap().clock_number_color,
                     size: number_size,
                     font: iced_graphics::Font::default(),
-                    horizontal_alignment: iced_graphics::HorizontalAlignment::Center,
-                    vertical_alignment: iced_graphics::VerticalAlignment::Center,
+                    horizontal_alignment: iced_graphics::alignment::Horizontal::Center,
+                    vertical_alignment: iced_graphics::alignment::Vertical::Center,
                 };
 
                 frame.fill_text(text);
@@ -391,8 +391,8 @@ fn clock(
                         color: style.get(&style_state).unwrap().clock_number_color,
                         size: number_size,
                         font: iced_graphics::Font::default(),
-                        horizontal_alignment: iced_graphics::HorizontalAlignment::Center,
-                        vertical_alignment: iced_graphics::VerticalAlignment::Center,
+                        horizontal_alignment: iced_graphics::alignment::Horizontal::Center,
+                        vertical_alignment: iced_graphics::alignment::Vertical::Center,
                     };
 
                     frame.fill_text(text);
@@ -429,8 +429,8 @@ fn clock(
                             color: style.get(&style_state).unwrap().clock_number_color,
                             size: number_size,
                             font: iced_graphics::Font::default(),
-                            horizontal_alignment: iced_graphics::HorizontalAlignment::Center,
-                            vertical_alignment: iced_graphics::VerticalAlignment::Center,
+                            horizontal_alignment: iced_graphics::alignment::Horizontal::Center,
+                            vertical_alignment: iced_graphics::alignment::Vertical::Center,
                         };
 
                         frame.fill_text(text);

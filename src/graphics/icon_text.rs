@@ -49,19 +49,19 @@ where
         size: u16,
         font: Option<Self::Font>,
         color: Option<iced_graphics::Color>,
-        horizontal_alignment: iced_graphics::HorizontalAlignment,
-        vertical_alignment: iced_graphics::VerticalAlignment,
+        horizontal_alignment: iced_graphics::alignment::Horizontal,
+        vertical_alignment: iced_graphics::alignment::Vertical,
     ) -> Self::Output {
         let x = match horizontal_alignment {
-            iced_native::HorizontalAlignment::Left => bounds.x,
-            iced_native::HorizontalAlignment::Center => bounds.center_x(),
-            iced_native::HorizontalAlignment::Right => bounds.x + bounds.width,
+            iced_native::alignment::Horizontal::Left => bounds.x,
+            iced_native::alignment::Horizontal::Center => bounds.center_x(),
+            iced_native::alignment::Horizontal::Right => bounds.x + bounds.width,
         };
 
         let y = match vertical_alignment {
-            iced_native::VerticalAlignment::Top => bounds.y,
-            iced_native::VerticalAlignment::Center => bounds.center_y(),
-            iced_native::VerticalAlignment::Bottom => bounds.y + bounds.height,
+            iced_native::alignment::Vertical::Top => bounds.y,
+            iced_native::alignment::Vertical::Center => bounds.center_y(),
+            iced_native::alignment::Vertical::Bottom => bounds.y + bounds.height,
         };
 
         (

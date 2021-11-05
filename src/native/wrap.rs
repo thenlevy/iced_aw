@@ -7,8 +7,8 @@ use std::marker::PhantomData;
 use iced_native::{
     event,
     layout::{self, Limits, Node},
-    overlay, Align, Clipboard, Element, Event, Hasher, Layout, Length, Padding, Point, Rectangle,
-    Size, Widget,
+    overlay, Alignment, Clipboard, Element, Event, Hasher, Layout, Length, Padding, Point,
+    Rectangle, Size, Widget,
 };
 
 /// A container that distributes its contents horizontally.
@@ -17,7 +17,7 @@ pub struct Wrap<'a, Message, Renderer, Direction> {
     /// The elements to distribute.
     pub elements: Vec<Element<'a, Message, Renderer>>,
     /// The alignment of the [`Wrap`](Wrap).
-    pub alignment: Align,
+    pub alignment: Alignment,
     /// The width of the [`Wrap`](Wrap).
     pub width: Length,
     /// The height of the [`Wrap`](Wrap).
@@ -137,7 +137,7 @@ impl<'a, Message, Renderer, Direction> Wrap<'a, Message, Renderer, Direction> {
 
     /// Sets the alignment of the [`Wrap`](Wrap).
     #[must_use]
-    pub const fn align_items(mut self, align: Align) -> Self {
+    pub const fn align_items(mut self, align: Alignment) -> Self {
         self.alignment = align;
         self
     }
@@ -264,7 +264,7 @@ impl<'a, Message, Renderer, Direction> Default for Wrap<'a, Message, Renderer, D
     fn default() -> Self {
         Self {
             elements: vec![],
-            alignment: Align::Start,
+            alignment: Alignment::Start,
             width: Length::Shrink,
             height: Length::Shrink,
             max_width: u32::MAX,
@@ -364,7 +364,7 @@ where
             nodes[range].iter_mut().for_each(|node| {
                 let size = node.size();
                 let space = Size::new(size.width, max_length);
-                node.align(Align::Start, self.alignment, space);
+                node.align(Alignment::Start, self.alignment, space);
             });
         }
         let (width, height) = (
@@ -459,7 +459,7 @@ where
             nodes[range].iter_mut().for_each(|node| {
                 let size = node.size();
                 let space = Size::new(max_length, size.height);
-                node.align(self.alignment, Align::Start, space);
+                node.align(self.alignment, Alignment::Start, space);
             });
         }
 

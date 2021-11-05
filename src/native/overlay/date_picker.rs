@@ -7,8 +7,8 @@ use chrono::{Datelike, Local, NaiveDate};
 use iced_native::{
     button, column, container, event, keyboard,
     layout::{self, Limits},
-    mouse, overlay, row, text, touch, Align, Button, Clipboard, Column, Container, Element, Event,
-    Layout, Length, Padding, Point, Row, Size, Text, Widget,
+    mouse, overlay, row, text, touch, Alignment, Button, Clipboard, Column, Container, Element,
+    Event, Layout, Length, Padding, Point, Row, Size, Text, Widget,
 };
 
 use crate::{
@@ -465,7 +465,7 @@ where
 
         let mut col = Column::<(), Renderer>::new()
             .spacing(SPACING)
-            .align_items(Align::Center)
+            .align_items(Alignment::Center)
             .push(month_year)
             .push(days)
             .layout(renderer, &limits);
